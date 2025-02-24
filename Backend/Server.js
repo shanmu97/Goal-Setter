@@ -10,7 +10,11 @@ const port = process.env.PORT || 5000
 
 const app = express()
 
-app.use(cors({origin:'*'}))
+app.use(cors({origin:'*',
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"], 
+    allowedHeaders: ["Content-Type", "Authorization"], 
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use('/api/goals',require("./Routes/getRoutes"))
