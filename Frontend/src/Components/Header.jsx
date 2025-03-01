@@ -3,6 +3,7 @@ import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../Features/Auth/AuthSlice";
+import logo from '../../logo.webp'
 
 function Header() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
+        <img src={logo} width='48px' height='48px'/>
         <Link to="/">GoalSetter</Link>
       </div>
       <ul>

@@ -50,6 +50,17 @@ h1, h2, h3 {
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
 }
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+img{
+  display: block;
+  margin:0 10px;
+}
 
 .header ul {
   display: flex;
